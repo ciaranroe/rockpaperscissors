@@ -45,7 +45,25 @@ let playRound = (computer, human) => {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-console.log(playRound(computerSelection, humanSelection))
+let playGame = () => {
+    for (let i = 0 ; i < 5 ; i++){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        console.log(playRound(computerSelection, humanSelection));
+        console.log(`human `+humanScore);
+        console.log(`computer `+computerScore);
+    }
+    console.log(`Game Over!`);
+    if(humanScore === computerScore){
+        console.log(`it's a draw`);
+    }
+    else if(humanScore > computerScore){
+        console.log(`You win! ${humanScore} points to ${computerScore}`);
+    }
+    else{
+        console.log(`You lose. ${computerScore} points to ${humanScore}`);
+    }
+}
+
+playGame();
