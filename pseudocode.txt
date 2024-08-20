@@ -4,3 +4,7 @@ CALL GETCOMPUTERCHOICE
         IF ELSE  number = 2 THEN paper
             ELSE scissors
     ENDIF 
+
+SEQUENCE get user input
+
+CALL 
